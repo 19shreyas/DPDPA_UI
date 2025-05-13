@@ -75,7 +75,7 @@ set_custom_css()
 #st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=200)
 col_logo, _ = st.sidebar.columns([1, 4])
 with col_logo:
-    st.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=150)
+    st.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=500)
 
 
 st.sidebar.title("📘 Navigation")
