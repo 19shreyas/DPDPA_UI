@@ -1,9 +1,30 @@
 import streamlit as st
 
+def set_custom_css():
+    st.markdown("""
+    <style>
+    /* Make sidebar text white */
+    section[data-testid="stSidebar"] * {
+        color: white;
+    }
+
+    /* Make main content text dark */
+    section.main div.block-container {
+        color: #2E2E38;
+    }
+
+    /* Optional: tighten logo spacing */
+    section[data-testid="stSidebar"] img {
+        margin-bottom: 20px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+
 # --- Sidebar Navigation ---
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
+set_custom_css()
 st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=150)
-
 st.sidebar.title("📘 Navigation")
 
 menu = st.sidebar.radio("Go to", [
