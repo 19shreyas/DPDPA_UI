@@ -72,7 +72,7 @@ st.markdown("""
         width: 160px;
     }
     </style>
-    <img id="ey-logo-global" src=".images/EY-Parthenon_idpWq1a8hl_0.png" />
+    <img id="ey-logo-global" src="images/EY-Parthenon_idpWq1a8hl_0.png" />
     """, unsafe_allow_html=True)
 
 set_custom_css()
