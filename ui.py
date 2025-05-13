@@ -18,9 +18,9 @@ def set_custom_css():
     section[data-testid="stSidebar"] img {
         display: block;
         margin: 0 auto 1.5rem 0;
-        padding-top: 8px;
-        padding-left: 10px;
-        width: 150px;
+        padding-top: 0;
+        padding-left: 0;
+        width: 400px;
     }
 
     /* MAIN CONTENT OVERRIDES */
