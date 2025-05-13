@@ -61,13 +61,25 @@ def set_custom_css():
     }
     
         
-    /* --- White background with dark border for text inputs and textareas --- */
-    input, textarea, div[role="textbox"] {
+    /* Only for actual input and textarea fields */
+    input, textarea {
         background-color: #FFFFFF !important;
         color: #2E2E38 !important;
         border: 1px solid #2E2E38 !important;
         border-radius: 6px !important;
     }
+    
+    /* For Streamlit selectboxes */
+    div[data-baseweb="select"] {
+        background-color: #2E2E38 !important;
+        color: white !important;
+        border-radius: 6px !important;
+        border: none !important;
+    }
+    div[data-baseweb="select"] * {
+        color: white !important;
+    }
+
 
     </style>
     """, unsafe_allow_html=True)
