@@ -50,13 +50,30 @@ def set_custom_css():
         border-radius: 6px;
         border: none;
     }
-    /* Ensure both selected and unselected radio labels are visible */
-    .stRadio > div > label,
-    .stRadio > div > div {
-    color: white !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-}
+    
+    /* --- Custom Radio Button Styling --- */
+    div[data-baseweb="radio"] {
+        padding: 4px 0;
+    }
+    
+    div[data-baseweb="radio"] > div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    /* Outer circle (radio border) */
+    div[data-baseweb="radio"] svg {
+        stroke: #2E2E38 !important;      /* Dark border */
+        stroke-width: 2px;
+        fill: white !important;          /* Default unselected fill */
+    }
+    
+    /* Filled center for selected radio */
+    div[data-baseweb="radio"] input:checked + div svg {
+        fill: #2E2E38 !important;        /* Fill selected */
+        stroke: #2E2E38 !important;
+    }
 
 
     </style>
