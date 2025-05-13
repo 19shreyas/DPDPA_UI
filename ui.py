@@ -79,28 +79,19 @@ def set_custom_css():
     div[data-baseweb="select"] * {
         color: white !important;
     }
-    /* --- Fix checkbox visibility --- */
-    input[type="checkbox"] {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #2E2E38;
-        border-radius: 4px;
-        background-color: white;
-        position: relative;
-        margin-right: 10px;
-        vertical-align: middle;
-        cursor: pointer;
+    /* Fix checkbox visibility */
+    div[data-baseweb="checkbox"] > div {
+        background-color: white !important;
+        border: 2px solid #2E2E38 !important;
+        border-radius: 4px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
     
-    /* Show checkmark when selected */
-    input[type="checkbox"]:checked::before {
-        content: "✓";
-        color: #2E2E38;
-        font-size: 16px;
-        position: absolute;
-        left: 2px;
-        top: -1px;
+    /* Fix checkmark color */
+    div[data-baseweb="checkbox"] svg {
+        stroke: #2E2E38 !important;
+        stroke-width: 2px !important;
     }
 
 
