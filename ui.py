@@ -79,8 +79,9 @@ def set_custom_css():
     div[data-baseweb="select"] * {
         color: white !important;
     }
-  /* Make checkbox box always visible */
-    div[data-baseweb="checkbox"] > div:first-child {
+
+    /* Ensure the checkbox box is always visible */
+    div[data-baseweb="checkbox"] > label > div:first-child {
         background-color: white !important;
         border: 2px solid #2E2E38 !important;
         border-radius: 4px !important;
@@ -90,19 +91,16 @@ def set_custom_css():
         align-items: center !important;
         justify-content: center !important;
         box-shadow: none !important;
-        transition: none !important;
     }
-    
-    /* Always show the border regardless of hover/focus */
-    div[data-baseweb="checkbox"]:not(:hover) > div:first-child {
-        border: 2px solid #2E2E38 !important;
+
+    /* Show the checkmark when selected */
+    div[data-baseweb="checkbox"] input:checked + div {
+        background-color: #2E2E38 !important;
     }
-    
-    /* Style the checkmark icon inside the checkbox */
+
     div[data-baseweb="checkbox"] svg {
-        stroke: #2E2E38 !important;
-        stroke-width: 3px !important;
-        display: block !important;
+        stroke: white !important;
+        stroke-width: 2.5px !important;
     }
 
     </style>
