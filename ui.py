@@ -35,6 +35,12 @@ def set_custom_css():
     color: white !important;
     }
 
+    /* Fix Browse files button text inside file uploader */
+    .stFileUploader button,
+    .stFileUploader label {
+    color: white !important;
+    font-weight: 500;
+    }
 
     /* Fix download and regular buttons */
     .stButton > button, .stDownloadButton > button {
