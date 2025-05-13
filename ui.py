@@ -188,7 +188,7 @@ elif menu == "Match to DPDPA":
     #st.header("3. Select Scope of Evaluation")
     st.markdown("<h3 style='font-size:24px; font-weight:700;'>3. Select Scope of Evaluation</h3>", unsafe_allow_html=True)
     scope = st.selectbox("", [
-        "Entire DPDPA (default)", "Only Act", "Only Rules", "Custom Sections"], index=0)
+        "DPDP Act 2023 (default)", "DPDP Rules 2025", "DPDP Act + Rules", "Custom Sections"], index=0)
     if scope == "Custom Sections":
         custom_sections = st.multiselect("Select specific sections to match against", [
         "Section 4 — Grounds for Processing Personal Data", "Section 5 — Notice", "Section 6 — Consent", "Section 7 — Certain Legitimate Uses",
