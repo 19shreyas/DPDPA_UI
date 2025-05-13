@@ -50,6 +50,14 @@ def set_custom_css():
         border-radius: 6px;
         border: none;
     }
+    /* Ensure both selected and unselected radio labels are visible */
+    .stRadio > div > label,
+    .stRadio > div > div {
+    color: #2E2E38 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
 
     </style>
     """, unsafe_allow_html=True)
