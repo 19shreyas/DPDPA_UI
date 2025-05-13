@@ -183,7 +183,7 @@ elif menu == "Match to DPDPA":
     #st.header("2. Choose Matching Level")
     st.markdown("<h3 style='font-size:24px; font-weight:700;'>2. Choose Matching Level</h3>", unsafe_allow_html=True)
     match_level = st.radio("How do you want to match?", [
-        "Full Policy Match (default)", "Section-wise Match"], index=0)
+        "Document-level Match (default)", "Clause-level Match"], index=0)
 
     #st.header("3. Select Scope of Evaluation")
     st.markdown("<h3 style='font-size:24px; font-weight:700;'>3. Select Scope of Evaluation</h3>", unsafe_allow_html=True)
