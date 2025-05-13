@@ -89,14 +89,14 @@ set_custom_css()
 col_logo, _ = st.sidebar.columns([4, 1])
 # with col_logo:
 #     st.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=500)
-st.sidebar.markdown(
-    """
-    <div style="display: flex; justify-content: flex-start; align-items: flex-start; margin-bottom: 0.5rem; padding-top: 0;">
-        <img src=".images/EY-Parthenon_idpWq1a8hl_0.png" width="140"/>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# st.sidebar.markdown(
+#     """
+#     <div style="display: flex; justify-content: flex-start; align-items: flex-start; margin-bottom: 0.5rem; padding-top: 0;">
+#         <img src=".images/EY-Parthenon_idpWq1a8hl_0.png" width="140"/>
+#     </div>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 st.sidebar.title("📘 Navigation")
 
