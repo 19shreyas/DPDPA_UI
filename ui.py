@@ -38,7 +38,7 @@ def set_custom_css():
     /* Fix Browse files button text inside file uploader */
     .stFileUploader button,
     .stFileUploader label {
-    color: white !important;
+    color: black !important;
     font-weight: 500;
     }
 
