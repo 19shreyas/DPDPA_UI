@@ -79,25 +79,31 @@ def set_custom_css():
     div[data-baseweb="select"] * {
         color: white !important;
     }
-  
-    /* --- Fix checkbox box styling in Streamlit --- */
+  /* Make checkbox box always visible */
     div[data-baseweb="checkbox"] > div:first-child {
         background-color: white !important;
         border: 2px solid #2E2E38 !important;
         border-radius: 4px !important;
         width: 20px !important;
         height: 20px !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: none !important;
+        transition: none !important;
     }
     
-    /* --- Fix checkbox tick icon --- */
+    /* Always show the border regardless of hover/focus */
+    div[data-baseweb="checkbox"]:not(:hover) > div:first-child {
+        border: 2px solid #2E2E38 !important;
+    }
+    
+    /* Style the checkmark icon inside the checkbox */
     div[data-baseweb="checkbox"] svg {
         stroke: #2E2E38 !important;
         stroke-width: 3px !important;
+        display: block !important;
     }
-
 
     </style>
     """, unsafe_allow_html=True)
