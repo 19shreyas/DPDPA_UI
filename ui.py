@@ -3,7 +3,7 @@ import streamlit as st
 def set_custom_css():
     st.markdown("""
     <style>
-    /* Force white text for all sidebar content */
+    /* SIDEBAR STYLING */
     section[data-testid="stSidebar"] {
         background-color: #2E2E38;
         color: white !important;
@@ -12,17 +12,51 @@ def set_custom_css():
         color: white !important;
     }
 
-    /* Force dark text for main content */
+    /* MAIN CONTENT OVERRIDES */
     section.main div.block-container {
         color: #2E2E38 !important;
     }
-    h1, h2, h3, h4, h5, h6, p, span, div {
+
+    /* Headings and body */
+    h1, h2, h3, h4, h5, h6,
+    p, span, label, div, .markdown-text-container {
         color: #2E2E38 !important;
+    }
+
+    /* Text inputs, selectboxes, file upload, text areas */
+    input, textarea, select, div[role="textbox"] {
+        background-color: #FFFFFF !important;
+        color: #2E2E38 !important;
+        border: 1px solid #DDD !important;
+        border-radius: 6px !important;
+    }
+
+    /* Tables and dataframes */
+    .stDataFrame, .stDataFrame div {
+        color: #2E2E38 !important;
+        background-color: #FAFAFA !important;
+    }
+
+    /* Metric font override */
+    .stMetric label {
+        color: #666666 !important;
+    }
+
+    /* Markdown inside expanders or sections */
+    .markdown-text-container p {
+        color: #2E2E38 !important;
+    }
+
+    /* Fix button text color */
+    .stButton>button {
+        color: #2E2E38 !important;
+        background-color: #FFE600;
+        font-weight: 600;
+        border-radius: 6px;
+        border: none;
     }
     </style>
     """, unsafe_allow_html=True)
-
-
 
 # --- Sidebar Navigation ---
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
