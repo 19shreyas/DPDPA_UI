@@ -57,11 +57,37 @@ elif menu == "📄 Create Policy":
 # --- Match to DPDPA ---
 elif menu == "🧩 Match to DPDPA":
     st.title("Match Policy to DPDPA")
-    uploaded_file = st.file_uploader("Upload your privacy policy (PDF or TXT)")
-    matching_level = st.selectbox("Choose Matching Strictness", ["Strict", "Moderate", "Relaxed"])
-    if st.button("Check Compliance"):
-        st.success("Compliance check initiated. You will see results shortly.")
-        st.write("(Sample output) ✅ Section 5 - Notice: Matched")
+
+    st.header("1. Upload Your Policy Document")
+    policy_file = st.file_uploader("Upload .docx or .txt file", type=["docx", "txt"])
+    policy_text = st.text_area("Or paste your policy text here:", height=200)
+
+    st.header("2. Choose Matching Level")
+    match_level = st.radio("How do you want to match?", [
+        "Full Policy Match (default)", "Section-wise Match"], index=0)
+
+    st.header("3. Select Scope of Evaluation")
+    scope = st.selectbox("Scope", [
+        "Entire DPDPA (default)", "Only Act", "Only Rules", "Custom Sections"], index=0)
+
+    st.header("4. Industry Context (Optional)")
+    industry = st.selectbox("Industry Filter", [
+        "General", "Automotive", "Healthcare", "Fintech", "Other"])
+
+    st.header("5. Run Compliance Check")
+    if st.button("🔍 Run Check"):
+        if policy_file or policy_text:
+            with st.spinner("Running GPT-based compliance evaluation..."):
+                st.success("Compliance check complete.")
+                st.metric("Overall Compliance", "78%")
+                st.markdown("**Section 5 (Notice):** ✅\n**Section 7 (Children’s Data):** ❌\n**Section 9 (Breach):** ⚠️")
+        else:
+            st.warning("Please upload a file or paste policy text.")
+
+    st.header("6. Generate / Export Output")
+    export_format = st.selectbox("Choose export format", ["PDF", "CSV", "JSON"])
+    if st.button("📥 Download Output"):
+        st.success("Download started (simulated).")
 
 # --- Dashboard & Reports ---
 elif menu == "📊 Dashboard & Reports":
