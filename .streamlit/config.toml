@@ -1,5 +1,5 @@
 [theme]
-base="dark"  # or "light" if you prefer
+base="light"  # or "light" if you prefer
 primaryColor="#FFE600"       # EY Yellow (buttons, highlights)
 backgroundColor="#2E2E38"    # Charcoal Black (main background)
 secondaryBackgroundColor="#1C1C24"  # Darker shade for cards
