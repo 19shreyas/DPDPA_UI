@@ -110,8 +110,8 @@ st.sidebar.markdown("<h1 style='font-size:42px; font-weight:700;'>Navigation</h1
 
 menu = st.sidebar.radio("", [
     "Homepage",
-    "Create Policy",
-    "Match to DPDPA",
+    "Policy Compliance Checker",
+    "Policy Generator",
     "Dashboard & Reports",
     "Knowledge Assistant",
     "Admin Settings"
@@ -165,8 +165,8 @@ elif menu == "Create Policy":
         st.subheader("Saved Drafts")
         st.dataframe({"Draft": ["HR Policy", "Marketing Policy"], "Last Modified": ["2025-05-10", "2025-05-01"]})
 
-# --- Match to DPDPA ---
-elif menu == "Match to DPDPA":
+# --- Policy Compliance Checker ---
+elif menu == "Policy Compliance Checker":
     #st.title("Match Policy to DPDPA")
     st.markdown("<h1 style='font-size:38px; font-weight:800;'>Match Policy to DPDPA</h1>", unsafe_allow_html=True)
     
