@@ -34,6 +34,11 @@ def set_custom_css():
     .stFileUploader > div > div {
         color: #2E2E38 !important;
     }
+    /* Fix file uploader text inside black box */
+    .stFileUploader div, .stFileUploader span {
+    color: white !important;
+    }
+
 
     /* Fix download and regular buttons */
     .stButton > button, .stDownloadButton > button {
