@@ -80,8 +80,8 @@ def set_custom_css():
         color: white !important;
     }
 
-    /* Ensure the checkbox box is always visible */
-    div[data-baseweb="checkbox"] > label > div:first-child {
+    /* === Fix Streamlit checkbox visibility === */
+    div[data-baseweb="checkbox"] > label > div {
         background-color: white !important;
         border: 2px solid #2E2E38 !important;
         border-radius: 4px !important;
@@ -90,18 +90,15 @@ def set_custom_css():
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        box-shadow: none !important;
+        margin-right: 10px !important;
     }
-
-    /* Show the checkmark when selected */
-    div[data-baseweb="checkbox"] input:checked + div {
-        background-color: #2E2E38 !important;
-    }
-
+    
+    /* Show checkmark when selected */
     div[data-baseweb="checkbox"] svg {
-        stroke: white !important;
+        stroke: #2E2E38 !important;
         stroke-width: 2.5px !important;
     }
+
 
     </style>
     """, unsafe_allow_html=True)
