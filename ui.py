@@ -3,6 +3,7 @@ import streamlit as st
 # --- Sidebar Navigation ---
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
 st.sidebar.title("📘 Navigation")
+st.sidebar.image("eyp_logo.png", use_column_width=True)
 menu = st.sidebar.radio("Go to", [
     "🏠 Homepage",
     "📄 Create Policy",
