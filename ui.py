@@ -88,9 +88,11 @@ elif menu == "Create Policy":
 
 # --- Match to DPDPA ---
 elif menu == "Match to DPDPA":
-    st.title("Match Policy to DPDPA")
-
-    st.header("1. Upload Your Policy Document")
+    #st.title("Match Policy to DPDPA")
+    st.markdown("<h1 style='font-size:38px; font-weight:800;'>Match Policy to DPDPA</h1>", unsafe_allow_html=True)
+    
+    #st.header("1. Upload Your Policy Document")
+    st.markdown("<h3 style='font-size:24px; font-weight:700;'>1. Upload Your Policy Document</h3>", unsafe_allow_html=True)
     upload_option = st.radio("Choose input method:", ["Upload File", "Paste Policy Text"], index=0)
     if upload_option == "Upload File":
         policy_file = st.file_uploader("Upload .docx or .txt file", type=["docx", "txt"])
@@ -99,11 +101,13 @@ elif menu == "Match to DPDPA":
         policy_text = st.text_area("Paste your policy text here:", height=250)
         policy_file = None
 
-    st.header("2. Choose Matching Level")
+    #st.header("2. Choose Matching Level")
+    st.markdown("<h3 style='font-size:24px; font-weight:700;'>2. Choose Matching Level</h3>", unsafe_allow_html=True)
     match_level = st.radio("How do you want to match?", [
         "Full Policy Match (default)", "Section-wise Match"], index=0)
 
-    st.header("3. Select Scope of Evaluation")
+    #st.header("3. Select Scope of Evaluation")
+    st.markdown("<h3 style='font-size:24px; font-weight:700;'>3. Select Scope of Evaluation</h3>", unsafe_allow_html=True)
     scope = st.selectbox("Scope", [
         "Entire DPDPA (default)", "Only Act", "Only Rules", "Custom Sections"], index=0)
     if scope == "Custom Sections":
@@ -113,14 +117,16 @@ elif menu == "Match to DPDPA":
     else:
         custom_sections = []
 
-    st.header("4. Industry Context (Optional)")
+    #st.header("4. Industry Context (Optional)")
+    st.markdown("<h3 style='font-size:24px; font-weight:700;'>4. Industry Context (Optional)</h3>", unsafe_allow_html=True)
     industry = st.selectbox("Industry Filter", ["General", "Automotive", "Healthcare", "Fintech", "Other"])
     if industry == "Other":
         custom_industry = st.text_input("Specify your industry")
     else:
         custom_industry = None
 
-    st.header("5. Run Compliance Check")
+    #st.header("5. Run Compliance Check")
+    st.markdown("<h3 style='font-size:24px; font-weight:700;'>5. Run Compliance Check</h3>", unsafe_allow_html=True)
     if st.button("🔍 Run Compliance Check"):
         if policy_file or policy_text:
             with st.spinner("Running GPT-based compliance evaluation..."):
@@ -135,7 +141,8 @@ elif menu == "Match to DPDPA":
         else:
             st.warning("Please upload a file or paste policy text.")
 
-    st.header("6. Generate / Export Output")
+    #st.header("6. Generate / Export Output")
+    st.markdown("<h3 style='font-size:24px; font-weight:700;'>6. Generate / Export Output</h3>", unsafe_allow_html=True)
     export_format = st.selectbox("Choose export format", ["PDF", "CSV", "JSON"])
     include_details = st.checkbox("Include suggested rewrites and clause-level insights")
     if st.button("📥 Download Output"):
