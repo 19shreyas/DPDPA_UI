@@ -87,10 +87,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-#st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=200)
-col_logo, _ = st.sidebar.columns([4, 1])
-with col_logo:
-    st.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=500)
 
 
 st.sidebar.title("📘 Navigation")
