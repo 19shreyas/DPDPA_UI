@@ -3,22 +3,19 @@ import streamlit as st
 def set_custom_css():
     st.markdown("""
     <style>
-    /* Sidebar: white text */
-    section[data-testid="stSidebar"] * {
-        color: white;
-    }
-
-    /* Sidebar background */
+    /* Force white text for all sidebar content */
     section[data-testid="stSidebar"] {
         background-color: #2E2E38;
+        color: white !important;
+    }
+    section[data-testid="stSidebar"] * {
+        color: white !important;
     }
 
-    /* Main content: dark text (force override) */
+    /* Force dark text for main content */
     section.main div.block-container {
         color: #2E2E38 !important;
     }
-
-    /* Fix titles and subheaders too */
     h1, h2, h3, h4, h5, h6, p, span, div {
         color: #2E2E38 !important;
     }
