@@ -38,7 +38,12 @@ menu = st.sidebar.radio("Go to", [
     "⚙️ Admin Settings"
 ])
 st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
-st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=250)
+#st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=250)
+st.sidebar.markdown("""
+    <div style='padding: 16px 12px 8px 12px;'>
+        <img src='.images/EY-Parthenon_idpWq1a8hl_0.png' width='180'>
+    </div>
+""", unsafe_allow_html=True)
 # --- Homepage ---
 if menu == "🏠 Homepage":
     st.title("DPDPA Compliance Tool")
