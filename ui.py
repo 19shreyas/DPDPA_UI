@@ -68,6 +68,7 @@ def set_custom_css():
         color: #2E2E38 !important;
         border: 1px solid #2E2E38 !important;
         border-radius: 6px !important;
+        caret-color: #2E2E38
     }
     
     /* For Streamlit selectboxes */
