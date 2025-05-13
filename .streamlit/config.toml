@@ -1,7 +1,7 @@
 [theme]
 base="light"  # or "light" if you prefer
 primaryColor="#FFE600"       # EY Yellow (buttons, highlights)
-backgroundColor="#2E2E38"    # Charcoal Black (main background)
-secondaryBackgroundColor="#1C1C24"  # Darker shade for cards
-textColor="#FFFFFF"          # White text
+backgroundColor="#FFFFFF"    # Charcoal Black (main background)
+secondaryBackgroundColor="#F5F5F5"  # Darker shade for cards
+textColor="#2E2E38"          # White text
 font="sans serif"            # Clean, modern font
