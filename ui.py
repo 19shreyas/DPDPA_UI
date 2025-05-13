@@ -61,29 +61,17 @@ def set_custom_css():
     }
     
     /* --- Custom Radio Button Styling --- */
-    div[data-baseweb="radio"] {
-        padding: 4px 0;
-    }
-    
-    div[data-baseweb="radio"] > div {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    /* Outer circle (radio border) */
-    div[data-baseweb="radio"] svg {
-        stroke: #2E2E38 !important;      /* Dark border */
+        div[data-baseweb="radio"] svg {
+        stroke: #2E2E38 !important;
         stroke-width: 2px;
-        fill: white !important;          /* Default unselected fill */
+        fill: white !important;
     }
-    
-    /* Filled center for selected radio */
     div[data-baseweb="radio"] input:checked + div svg {
-        fill: #2E2E38 !important;        /* Fill selected */
+        fill: #2E2E38 !important;
         stroke: #2E2E38 !important;
     }
     
+        
     /* --- White background with dark border for text inputs and textareas --- */
     input, textarea, div[role="textbox"] {
         background-color: #FFFFFF !important;
