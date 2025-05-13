@@ -2,8 +2,9 @@ import streamlit as st
 
 # --- Sidebar Navigation ---
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
-st.sidebar.title("📘 Navigation")
 st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=150)
+
+st.sidebar.title("📘 Navigation")
 
 menu = st.sidebar.radio("Go to", [
     "🏠 Homepage",
