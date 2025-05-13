@@ -72,9 +72,8 @@ st.markdown("""
         width: 160px;
     }
     </style>
-    <img id="ey-logo-global" src="images/EY-Parthenon_idpWq1a8hl_0.png" />
     """, unsafe_allow_html=True)
-
+st.image("images/EY-Parthenon_idpWq1a8hl_0.png", width=160)
 set_custom_css()
 #st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=200)
 col_logo, _ = st.sidebar.columns([4, 1])
