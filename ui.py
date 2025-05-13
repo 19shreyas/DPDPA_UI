@@ -81,7 +81,7 @@ def set_custom_css():
     }
     /* Fix checkbox visibility */
     div[data-baseweb="checkbox"] > div {
-        background-color: white !important;
+        background-color: black !important;
         border: 2px solid #2E2E38 !important;
         border-radius: 4px !important;
         width: 20px !important;
@@ -201,7 +201,7 @@ elif menu == "Match to DPDPA":
 
     #st.header("5. Run Compliance Check")
     st.markdown("<h3 style='font-size:24px; font-weight:700;'>5. Run Compliance Check</h3>", unsafe_allow_html=True)
-    if st.button("🔍 Run Compliance Check"):
+    if st.button("Run Compliance Check"):
         if policy_file or policy_text:
             with st.spinner("Running GPT-based compliance evaluation..."):
                 st.success("Compliance check complete.")
@@ -219,7 +219,7 @@ elif menu == "Match to DPDPA":
     st.markdown("<h3 style='font-size:24px; font-weight:700;'>6. Generate / Export Output</h3>", unsafe_allow_html=True)
     export_format = st.selectbox("Choose export format", ["PDF", "CSV", "JSON"])
     include_details = st.checkbox("Include suggested rewrites and clause-level insights")
-    if st.button("📥 Download Output"):
+    if st.button("Download Output"):
         st.success("Export ready (simulated). File will include compliance results and recommendations.")
 
 # --- Dashboard & Reports ---
