@@ -30,10 +30,6 @@ def set_custom_css():
         color: #2E2E38 !important;
     }
 
-    /* Fix file uploader text (drag-drop) */
-    .stFileUploader > div > div {
-        color: #2E2E38 !important;
-    }
     /* Fix file uploader text inside black box */
     .stFileUploader div, .stFileUploader span {
     color: white !important;
