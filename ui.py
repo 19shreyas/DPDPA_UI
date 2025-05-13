@@ -83,6 +83,14 @@ def set_custom_css():
         fill: #2E2E38 !important;        /* Fill selected */
         stroke: #2E2E38 !important;
     }
+    
+    /* --- White background with dark border for text inputs and textareas --- */
+    input, textarea, div[role="textbox"] {
+        background-color: #FFFFFF !important;
+        color: #2E2E38 !important;
+        border: 1px solid #2E2E38 !important;
+        border-radius: 6px !important;
+    }
 
 
     </style>
