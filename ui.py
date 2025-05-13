@@ -23,6 +23,7 @@ def set_custom_css():
     /* Fix for input text color */
     input, textarea, select, div[role="textbox"] {
         color: #2E2E38 !important;
+        caret-color: #2E2E38
     }
 
     /* Fix for selectbox and dropdowns */
