@@ -54,7 +54,7 @@ def set_custom_css():
     /* Fix download and regular buttons */
     .stButton > button, .stDownloadButton > button {
         color: #2E2E38 !important;
-        background-color: #FFE600;
+        background-color: #1a9afa;
         font-weight: 600;
         border-radius: 6px;
         border: none;
