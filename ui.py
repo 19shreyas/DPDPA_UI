@@ -106,6 +106,23 @@ def set_custom_css():
         stroke: #2E2E38 !important;
         stroke-width: 2.5px !important;
     }
+    /* === FIX: Cursor visibility in text areas === */
+    textarea,
+    .stTextArea textarea,
+    div[role="textbox"],
+    .stTextInput input {
+        background-color: #FFFFFF !important;
+        color: #2E2E38 !important;
+        caret-color: #2E2E38 !important;
+        border: 1px solid #2E2E38 !important;
+        border-radius: 6px !important;
+    }
+    
+    /* Explicit caret fix for editable areas */
+    div[contenteditable="true"] {
+        caret-color: #2E2E38 !important;
+        color: #2E2E38 !important;
+    }
 
 
     </style>
