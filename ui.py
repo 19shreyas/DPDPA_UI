@@ -226,7 +226,8 @@ elif menu == "Match to DPDPA":
     #st.header("6. Generate / Export Output")
     st.markdown("<h3 style='font-size:24px; font-weight:700;'>6. Generate / Export Output</h3>", unsafe_allow_html=True)
     export_format = st.selectbox("Choose export format", ["PDF", "CSV", "JSON"])
-    include_details = st.checkbox("Include suggested rewrites and clause-level insights")
+    with st.container():
+        include_details = st.checkbox("Include suggested rewrites and clause-level insights")
     if st.button("Download Output"):
         st.success("Export ready (simulated). File will include compliance results and recommendations.")
 
