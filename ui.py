@@ -71,7 +71,6 @@ def set_custom_css():
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
 set_custom_css()
 st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=200)
-st.sidebar.markdown("<br><br><br>", unsafe_allow_html=True)
 st.sidebar.title("📘 Navigation")
 
 menu = st.sidebar.radio("Go to", [
