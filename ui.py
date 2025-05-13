@@ -7,6 +7,8 @@ def set_custom_css():
     section[data-testid="stSidebar"] {
         background-color: #2E2E38;
         color: white !important;
+        padding-top: 0 !important;       /* eliminate default top padding */
+        margin-top: 0 !important;
     }
     section[data-testid="stSidebar"] * {
         color: white !important;
