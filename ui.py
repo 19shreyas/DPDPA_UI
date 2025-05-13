@@ -3,30 +3,39 @@ import streamlit as st
 def set_custom_css():
     st.markdown("""
     <style>
-    /* Force white text for all sidebar content */
+    /* Sidebar base */
     section[data-testid="stSidebar"] {
         background-color: #2E2E38;
         color: white !important;
+        position: relative; /* Enables absolute positioning inside */
     }
     section[data-testid="stSidebar"] * {
         color: white !important;
     }
 
-    /* Force dark text for main content */
+    /* Main content text */
     section.main div.block-container {
         color: #2E2E38 !important;
     }
     h1, h2, h3, h4, h5, h6, p, span, div {
         color: #2E2E38 !important;
     }
+
+    /* Bottom logo */
+    .bottom-logo {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
     </style>
     """, unsafe_allow_html=True)
 
-
-
-# --- Sidebar Navigation ---
+# -- Sidebar Layout --
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
 set_custom_css()
+
 st.sidebar.title("Navigation")
 
 menu = st.sidebar.radio("Go to", [
@@ -37,13 +46,14 @@ menu = st.sidebar.radio("Go to", [
     "📚 Knowledge Assistant",
     "⚙️ Admin Settings"
 ])
-st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
-#st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=250)
+
+# Insert logo at bottom of sidebar
 st.sidebar.markdown("""
-    <div style='padding: 0px 12px 0px 12px;'>
-        <img src='https://i.postimg.cc/j2dv9kZ2/EY-Parthenon-idp-Wq1a8hl-0.png' width='250'>
+    <div class="bottom-logo">
+        <img src='https://i.postimg.cc/j2dv9kZ2/EY-Parthenon-idp-Wq1a8hl-0.png' width='180'>
     </div>
 """, unsafe_allow_html=True)
+
 # --- Homepage ---
 if menu == "🏠 Homepage":
     st.title("DPDPA Compliance Tool")
