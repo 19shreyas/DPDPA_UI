@@ -20,7 +20,7 @@ def set_custom_css():
         margin: 0 auto 1.5rem 0;
         padding-top: 0;
         padding-left: 0;
-        width: 400px;
+        width: 4000px;
     }
 
     /* MAIN CONTENT OVERRIDES */
