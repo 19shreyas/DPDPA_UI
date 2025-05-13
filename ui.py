@@ -3,7 +3,7 @@ import streamlit as st
 def set_custom_css():
     st.markdown("""
     <style>
-    /* Force white text for all sidebar content */
+    /* Sidebar Styling */
     section[data-testid="stSidebar"] {
         background-color: #2E2E38;
         color: white !important;
@@ -12,17 +12,40 @@ def set_custom_css():
         color: white !important;
     }
 
-    /* Force dark text for main content */
+    /* Main text and headers */
     section.main div.block-container {
         color: #2E2E38 !important;
     }
-    h1, h2, h3, h4, h5, h6, p, span, div {
+    h1, h2, h3, h4, h5, h6, p, span, label, div {
         color: #2E2E38 !important;
     }
+
+    /* Fix for input text color */
+    input, textarea, select, div[role="textbox"] {
+        color: #2E2E38 !important;
+    }
+
+    /* Fix for selectbox and dropdowns */
+    .stSelectbox div, .stRadio div, .stCheckbox div, .stTextInput div, .stDownloadButton div {
+        color: #2E2E38 !important;
+    }
+
+    /* Fix file uploader text (drag-drop) */
+    .stFileUploader > div > div {
+        color: #2E2E38 !important;
+    }
+
+    /* Fix download and regular buttons */
+    .stButton > button, .stDownloadButton > button {
+        color: #2E2E38 !important;
+        background-color: #FFE600;
+        font-weight: 600;
+        border-radius: 6px;
+        border: none;
+    }
+
     </style>
     """, unsafe_allow_html=True)
-
-
 
 # --- Sidebar Navigation ---
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
