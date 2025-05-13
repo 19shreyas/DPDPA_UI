@@ -14,15 +14,6 @@ def set_custom_css():
         color: white !important;
     }
 
-    /* EY logo spacing fix */
-    section[data-testid="stSidebar"] img {
-        display: block;
-        margin: 0 auto 1.5rem 0;
-        padding-top: 0;
-        padding-left: 0;
-        width: 160px;
-    }
-
     /* MAIN CONTENT OVERRIDES */
     section.main div.block-container {
         color: #2E2E38 !important;
