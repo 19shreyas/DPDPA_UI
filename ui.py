@@ -59,8 +59,13 @@ elif menu == "🧩 Match to DPDPA":
     st.title("Match Policy to DPDPA")
 
     st.header("1. Upload Your Policy Document")
-    policy_file = st.file_uploader("Upload .docx or .txt file", type=["docx", "txt"])
-    policy_text = st.text_area("Or paste your policy text here:", height=200)
+    upload_option = st.radio("Choose input method:", ["Upload File", "Paste Policy Text"], index=0)
+    if upload_option == "Upload File":
+        policy_file = st.file_uploader("Upload .docx or .txt file", type=["docx", "txt"])
+        policy_text = None
+    else:
+        policy_text = st.text_area("Paste your policy text here:", height=250)
+        policy_file = None
 
     st.header("2. Choose Matching Level")
     match_level = st.radio("How do you want to match?", [
@@ -69,25 +74,40 @@ elif menu == "🧩 Match to DPDPA":
     st.header("3. Select Scope of Evaluation")
     scope = st.selectbox("Scope", [
         "Entire DPDPA (default)", "Only Act", "Only Rules", "Custom Sections"], index=0)
+    if scope == "Custom Sections":
+        custom_sections = st.multiselect("Select specific sections to match against", [
+            "Section 4: Lawful Processing", "Section 5: Notice", "Section 6: Rights", 
+            "Section 7: Children’s Data", "Section 8: Data Processors", "Section 9: Breach", "Section 10: Grievance"])
+    else:
+        custom_sections = []
 
     st.header("4. Industry Context (Optional)")
-    industry = st.selectbox("Industry Filter", [
-        "General", "Automotive", "Healthcare", "Fintech", "Other"])
+    industry = st.selectbox("Industry Filter", ["General", "Automotive", "Healthcare", "Fintech", "Other"])
+    if industry == "Other":
+        custom_industry = st.text_input("Specify your industry")
+    else:
+        custom_industry = None
 
     st.header("5. Run Compliance Check")
-    if st.button("🔍 Run Check"):
+    if st.button("🔍 Run Compliance Check"):
         if policy_file or policy_text:
             with st.spinner("Running GPT-based compliance evaluation..."):
                 st.success("Compliance check complete.")
                 st.metric("Overall Compliance", "78%")
-                st.markdown("**Section 5 (Notice):** ✅\n**Section 7 (Children’s Data):** ❌\n**Section 9 (Breach):** ⚠️")
+                st.markdown("""
+                ### Clause-wise Evaluation:
+                - **Section 5 (Notice):** ✅ Matched
+                - **Section 7 (Children’s Data):** ❌ Missing Guardian Consent Clause
+                - **Section 9 (Breach):** ⚠️ Breach timeline undefined
+                """)
         else:
             st.warning("Please upload a file or paste policy text.")
 
     st.header("6. Generate / Export Output")
     export_format = st.selectbox("Choose export format", ["PDF", "CSV", "JSON"])
+    include_details = st.checkbox("Include suggested rewrites and clause-level insights")
     if st.button("📥 Download Output"):
-        st.success("Download started (simulated).")
+        st.success("Export ready (simulated). File will include compliance results and recommendations.")
 
 # --- Dashboard & Reports ---
 elif menu == "📊 Dashboard & Reports":
