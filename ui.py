@@ -48,6 +48,7 @@ menu = st.sidebar.radio("Go to", [
 ])
 
 # Insert logo at bottom of sidebar
+st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
 st.sidebar.markdown("""
     <div class="bottom-logo">
         <img src='https://i.postimg.cc/j2dv9kZ2/EY-Parthenon-idp-Wq1a8hl-0.png' width='180'>
