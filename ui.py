@@ -20,7 +20,7 @@ def set_custom_css():
         margin: 0 auto 1.5rem 0;
         padding-top: 0;
         padding-left: 0;
-        width: 4000px;
+        width: 160px;
     }
 
     /* MAIN CONTENT OVERRIDES */
@@ -73,7 +73,7 @@ def set_custom_css():
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
 set_custom_css()
 #st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=200)
-col_logo, _ = st.sidebar.columns([1, 4])
+col_logo, _ = st.sidebar.columns([4, 1])
 with col_logo:
     st.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=500)
 
