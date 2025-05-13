@@ -60,17 +60,6 @@ def set_custom_css():
         border: none;
     }
     
-    /* --- Custom Radio Button Styling --- */
-        div[data-baseweb="radio"] svg {
-        stroke: #2E2E38 !important;
-        stroke-width: 2px;
-        fill: white !important;
-    }
-    div[data-baseweb="radio"] input:checked + div svg {
-        fill: #2E2E38 !important;
-        stroke: #2E2E38 !important;
-    }
-    
         
     /* --- White background with dark border for text inputs and textareas --- */
     input, textarea, div[role="textbox"] {
