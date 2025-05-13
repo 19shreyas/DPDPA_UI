@@ -82,7 +82,7 @@ def set_custom_css():
     /* Fix checkbox visibility */
     div[data-baseweb="checkbox"] > div {
         background-color: black !important;
-        border: 2px solid #2E2E38 !important;
+        border: 2px solid white !important;
         border-radius: 4px !important;
         width: 20px !important;
         height: 20px !important;
