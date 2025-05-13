@@ -72,7 +72,16 @@ def set_custom_css():
 # --- Sidebar Navigation ---
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
 set_custom_css()
-st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=200)
+#st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=200)
+st.sidebar.markdown(
+    """
+    <div style="padding: 0; margin: 0;">
+        <img src=".images/EY-Parthenon_idpWq1a8hl_0.png" style="width: 160px; margin-bottom: 10px;" />
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.sidebar.title("📘 Navigation")
 
 menu = st.sidebar.radio("Go to", [
