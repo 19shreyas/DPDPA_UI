@@ -191,8 +191,8 @@ elif menu == "Match to DPDPA":
         "Entire DPDPA (default)", "Only Act", "Only Rules", "Custom Sections"], index=0)
     if scope == "Custom Sections":
         custom_sections = st.multiselect("Select specific sections to match against", [
-            "Section 4: Lawful Processing", "Section 5: Notice", "Section 6: Rights", 
-            "Section 7: Children’s Data", "Section 8: Data Processors", "Section 9: Breach", "Section 10: Grievance"])
+        "Section 4 — Grounds for Processing Personal Data", "Section 5 — Notice", "Section 6 — Consent", "Section 7 — Certain Legitimate Uses",
+        "Section 8 — General Obligations of Data Fiduciary", "Section 9 — Processing of Personal Data of Children", "Section 10 — Additional Obligations of Significant Data Fiduciaries"])
     else:
         custom_sections = []
 
