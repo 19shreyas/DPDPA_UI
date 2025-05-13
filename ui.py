@@ -79,19 +79,23 @@ def set_custom_css():
     div[data-baseweb="select"] * {
         color: white !important;
     }
-    /* Fix checkbox visibility */
-    div[data-baseweb="checkbox"] > div {
+  
+    /* --- Fix checkbox box styling in Streamlit --- */
+    div[data-baseweb="checkbox"] > div:first-child {
         background-color: white !important;
         border: 2px solid #2E2E38 !important;
         border-radius: 4px !important;
         width: 20px !important;
         height: 20px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
-    /* Fix checkmark color */
+    /* --- Fix checkbox tick icon --- */
     div[data-baseweb="checkbox"] svg {
         stroke: #2E2E38 !important;
-        stroke-width: 2px !important;
+        stroke-width: 3px !important;
     }
 
 
