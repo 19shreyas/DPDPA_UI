@@ -62,7 +62,7 @@ def set_custom_css():
 
 # --- Sidebar Navigation ---
 st.set_page_config(page_title="DPDPA Compliance Tool", layout="wide")
-st.image(".images/EYP Logo-white-bg.png", width=500)
+st.image(".images/EYP Logo-white-bg.png", width=250)
 set_custom_css()
 #st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=200)
 col_logo, _ = st.sidebar.columns([4, 1])
