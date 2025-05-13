@@ -91,6 +91,31 @@ def set_custom_css():
         border: 1px solid #2E2E38 !important;
         border-radius: 6px !important;
     }
+    /* Custom styling for ALL radio buttons */
+    input[type="radio"] {
+        appearance: none;
+        border: 2px solid #2E2E38;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        position: relative;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    
+    /* Fill the selected radio button */
+    input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #2E2E38;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+    }
 
 
     </style>
