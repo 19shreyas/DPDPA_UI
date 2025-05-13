@@ -131,9 +131,9 @@ if menu == "Homepage":
     Use the navigation panel to begin generating or matching your policy to India's latest data protection laws.
     """)
 
-# --- Create Policy ---
-elif menu == "Create Policy":
-    st.title("Create Policy")
+# --- Policy Generator ---
+elif menu == "Policy Generator":
+    st.title("Create a new Policy")
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "Full Policy Generator", "Section-wise Generator", "Lifecycle-wise Template", 
         "GPT Draft Assistant", "Saved Drafts"])
