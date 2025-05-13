@@ -53,7 +53,7 @@ def set_custom_css():
     /* Ensure both selected and unselected radio labels are visible */
     .stRadio > div > label,
     .stRadio > div > div {
-    color: #2E2E38 !important;
+    color: white !important;
     font-size: 16px !important;
     font-weight: 500 !important;
 }
