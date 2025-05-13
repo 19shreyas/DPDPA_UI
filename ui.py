@@ -3,22 +3,28 @@ import streamlit as st
 def set_custom_css():
     st.markdown("""
     <style>
-    /* Make sidebar text white */
+    /* Sidebar: white text */
     section[data-testid="stSidebar"] * {
         color: white;
     }
 
-    /* Make main content text dark */
-    section.main div.block-container {
-        color: #2E2E38;
+    /* Sidebar background */
+    section[data-testid="stSidebar"] {
+        background-color: #2E2E38;
     }
 
-    /* Optional: tighten logo spacing */
-    section[data-testid="stSidebar"] img {
-        margin-bottom: 20px;
+    /* Main content: dark text (force override) */
+    section.main div.block-container {
+        color: #2E2E38 !important;
+    }
+
+    /* Fix titles and subheaders too */
+    h1, h2, h3, h4, h5, h6, p, span, div {
+        color: #2E2E38 !important;
     }
     </style>
     """, unsafe_allow_html=True)
+
 
 
 # --- Sidebar Navigation ---
