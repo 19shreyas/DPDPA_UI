@@ -70,6 +70,12 @@ def set_custom_css():
         border-radius: 6px !important;
         caret-color: #2E2E38
     }
+    /* Additional fix for Streamlit's internal markdown editor (if used) */
+    div[contenteditable="true"] {
+        caret-color: #2E2E38 !important;
+        color: #2E2E38 !important;
+    }
+
     
     /* For Streamlit selectboxes */
     div[data-baseweb="select"] {
