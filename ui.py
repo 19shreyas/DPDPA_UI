@@ -41,7 +41,7 @@ st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><br><br><br><br>", 
 #st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=250)
 st.sidebar.markdown("""
     <div style='padding: 16px 12px 8px 12px;'>
-        <img src='https://i.postimg.cc/mryxMJn6/EYP-Logo-white-bg.png' width='180'>
+        <img src='https://i.postimg.cc/j2dv9kZ2/EY-Parthenon-idp-Wq1a8hl-0.png' width='250'>
     </div>
 """, unsafe_allow_html=True)
 # --- Homepage ---
