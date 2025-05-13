@@ -34,6 +34,15 @@ def set_custom_css():
     .stFileUploader div, .stFileUploader span {
     color: white !important;
     }
+    /* --- Force white text in selectbox/multiselect dropdowns with dark bg --- */
+    div[data-baseweb="select"] {
+        color: white !important;
+    }
+    
+    div[data-baseweb="select"] * {
+        color: white !important;
+    }
+
 
     /* Fix Browse files button text inside file uploader */
     .stFileUploader button,
