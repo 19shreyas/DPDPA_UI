@@ -65,16 +65,16 @@ st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=150)
 st.sidebar.title("📘 Navigation")
 
 menu = st.sidebar.radio("Go to", [
-    "🏠 Homepage",
-    "📄 Create Policy",
-    "🧩 Match to DPDPA",
-    "📊 Dashboard & Reports",
-    "📚 Knowledge Assistant",
-    "⚙️ Admin Settings"
+    "Homepage",
+    "Create Policy",
+    "Match to DPDPA",
+    "Dashboard & Reports",
+    "Knowledge Assistant",
+    "Admin Settings"
 ])
 
 # --- Homepage ---
-if menu == "🏠 Homepage":
+if menu == "Homepage":
     st.title("DPDPA Compliance Tool")
     st.markdown("""
     Welcome to the Digital Personal Data Protection Act (DPDPA) Compliance Platform.
@@ -82,7 +82,7 @@ if menu == "🏠 Homepage":
     """)
 
 # --- Create Policy ---
-elif menu == "📄 Create Policy":
+elif menu == "Create Policy":
     st.title("Create Policy")
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "Full Policy Generator", "Section-wise Generator", "Lifecycle-wise Template", 
@@ -116,7 +116,7 @@ elif menu == "📄 Create Policy":
         st.dataframe({"Draft": ["HR Policy", "Marketing Policy"], "Last Modified": ["2025-05-10", "2025-05-01"]})
 
 # --- Match to DPDPA ---
-elif menu == "🧩 Match to DPDPA":
+elif menu == "Match to DPDPA":
     st.title("Match Policy to DPDPA")
 
     st.header("1. Upload Your Policy Document")
@@ -171,7 +171,7 @@ elif menu == "🧩 Match to DPDPA":
         st.success("Export ready (simulated). File will include compliance results and recommendations.")
 
 # --- Dashboard & Reports ---
-elif menu == "📊 Dashboard & Reports":
+elif menu == "Dashboard & Reports":
     st.title("Dashboard & Reports")
     st.metric("Overall Compliance", "82%", "+7%")
     st.progress(0.82)
@@ -182,7 +182,7 @@ elif menu == "📊 Dashboard & Reports":
     st.download_button("Download Full Report", "Sample Report Data...", file_name="dpdpa_report.txt")
 
 # --- Knowledge Assistant ---
-elif menu == "📚 Knowledge Assistant":
+elif menu == "Knowledge Assistant":
     st.title("Knowledge Assistant")
     with st.expander("📘 DPDPA + DPDP Rules Summary"):
         st.markdown("Digital Personal Data Protection Act focuses on consent, purpose limitation, etc.")
@@ -194,7 +194,7 @@ elif menu == "📚 Knowledge Assistant":
         st.write("Email: support@dpdpatool.com | Call: +91-XXX-XXX")
 
 # --- Admin Settings ---
-elif menu == "⚙️ Admin Settings":
+elif menu == "Admin Settings":
     st.title("Admin Settings")
     st.subheader("User & Role Management")
     st.write("Admin | Reviewer | Editor")
