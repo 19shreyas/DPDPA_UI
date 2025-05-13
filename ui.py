@@ -37,7 +37,7 @@ menu = st.sidebar.radio("Go to", [
     "Knowledge Assistant",
     "Admin Settings"
 ])
-st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
+st.sidebar.markdown("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>", unsafe_allow_html=True)
 #st.sidebar.image(".images/EY-Parthenon_idpWq1a8hl_0.png", width=250)
 st.sidebar.markdown("""
     <div style='padding: 0px 12px 0px 12px;'>
